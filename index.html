@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Der VAN-Musik-Aphorismus-Rekreator (MARK)</title>
+    <title>Der VAN-Musik-Aphorismus-Rekreation (MARK)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,13 +19,13 @@
             font-style: italic;
             font-weight: bold;
             display: block;
-            margin: 20px 0; /* Abstand oben und unten */
+            margin: 0; /* Kein zusätzlicher Abstand oben oder unten */
         }
         .quelle {
             font-style: normal;
             color: #555;
             display: block;
-            margin-bottom: 40px; /* Abstand unten */
+            margin: 0; /* Kein zusätzlicher Abstand oben oder unten */
         }
         button {
             padding: 10px 20px;
@@ -74,7 +74,7 @@
             const randomIndex = Math.floor(Math.random() * aphorismen.length);
             const aphorismus = aphorismen[randomIndex];
             document.getElementById('aphorismus').innerHTML = `<span class="aphorismus">${aphorismus.text}</span>`;
-            document.getElementById('quelle').innerHTML = `(${aphorismus.source})`;
+            document.getElementById('quelle').innerHTML = `<span class="quelle">(${aphorismus.source})</span>`;
         });
     </script>
 </body>
