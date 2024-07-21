@@ -51,4 +51,31 @@
             { text: "In der Politik ist es wie in einem Konzert. Doch ewig braucht sie nicht zu währen.", source: "Amintore Busch" },
             { text: "In der Politik ist es wie in einem Konzert. Erst, wenn du ein Stück ganz fertig hast, probiere es am Instrumente!", source: "Amintore Schumann" },
             { text: "In der Politik ist es wie in einem Konzert: In meinem Fach ist das nicht nötig.", source: "Amintore Presley" },
-            { text: "In der Politik ist es wie
+            { text: "In der Politik ist es wie in einem Konzert: Sie bekommen sie umsonst.", source: "Amintore Cole" },
+            { text: "In der Politik ist es wie in einem Konzert: Du machst ihnen Mut.", source: "Amintore Strawinsky" },
+            { text: "In der Politik ist es wie in einem Konzert: Mick und ich hatten niemals Sex miteinander!", source: "Amintore Richards" },
+            { text: "Eine gute Sache über die Musik: Ungeübte Ohren halten schon das Stimmen der Instrumente für Musik.", source: "Bob Fanfani" },
+            { text: "Eine gute Sache über die Musik: Künstler reden ja nur übers Geld.", source: "Bob Sibelius" },
+            { text: "Eine gute Sache über die Musik: Sie verrät nie ihr letztes Geheimnis.", source: "Bob Wilde" },
+            { text: "Eine gute Sache über die Musik: Nur die Plattenfirmen denken, dass man sie besitzen kann.", source: "Bob Lennon" },
+            { text: "Eine gute Sache über die Musik: Sobald man aufhört treibt man zurück.", source: "Bob Britten" },
+            { text: "Eine gute Sache über die Musik: Man kann darüber nicht sprechen, man muss es erleben.", source: "Bob Springsteen" },
+            { text: "Eine gute Sache über die Musik: Doch ewig braucht sie nicht zu währen.", source: "Bob Busch" },
+            { text: "Eine gute Sache über die Musik: Erst, wenn du ein Stück ganz fertig hast, probiere es am Instrumente!", source: "Bob Schumann" },
+            { text: "Eine gute Sache über die Musik: In meinem Fach ist das nicht nötig.", source: "Bob Presley" },
+            { text: "Eine gute Sache über die Musik: Sie bekommen sie umsonst.", source: "Bob Cole" },
+            { text: "Eine gute Sache über die Musik: Du machst ihnen Mut.", source: "Bob Strawinsky" },
+            { text: "Eine gute Sache über die Musik: Rapper machen das.", source: "Bob Gallagher" },
+            { text: "Eine gute Sache über die Musik: Mick und ich hatten niemals Sex miteinander!", source: "Bob Richards" },
+            { text: "Über Musik kann man am besten mit Bankdirektoren reden: Ungeübte Ohren halten schon das Stimmen der Instrumente für Musik.", source: "Jean Fanfani" }
+        ];
+
+        document.getElementById('generate').addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * aphorismen.length);
+            const aphorismus = aphorismen[randomIndex];
+            document.getElementById('aphorismus').innerHTML = `<span class="aphorismus">${aphorismus.text}</span>`;
+            document.getElementById('quelle').innerHTML = `(${aphorismus.source})`;
+        });
+    </script>
+</body>
+</html>
