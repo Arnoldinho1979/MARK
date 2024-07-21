@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Der VAN-Musik-Aphorismus-Rekreator (MARK)</title>
+    <title>Der VAN-Musik-Aphorismus-Rekreation (MARK)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,8 +36,8 @@
     </style>
 </head>
 <body>
-    <h1>Der VAN-Musik-Aphorismus-Rekreator (MARK)</h1>
-    <button id="generate">Musik-Aphorismus generieren</button>
+    <h1>Der VAN-Musik-Aphorismus-Rekreation (MARK)</h1>
+    <button id="generate">Neuen Musik-Aphorismus generieren</button>
     <div id="aphorismus" class="aphorismus"></div>
     <div id="quelle" class="quelle"></div>
 
@@ -68,14 +68,40 @@
             { text: "Eine gute Sache über die Musik: Du machst ihnen Mut.", source: "Bob Strawinsky" },
             { text: "Eine gute Sache über die Musik: Rapper machen das.", source: "Bob Gallagher" },
             { text: "Eine gute Sache über die Musik: Mick und ich hatten niemals Sex miteinander!", source: "Bob Richards" },
-            { text: "Über Musik kann man am besten mit Bankdirektoren reden: Ungeübte Ohren halten schon das Stimmen der Instrumente für Musik.", source: "Jean Fanfani" }
+            { text: "Über Musik kann man am besten mit Bankdirektoren reden: Ungeübte Ohren halten schon das Stimmen der Instrumente für Musik.", source: "Jean Fanfani" },
+            { text: "Über Musik kann man am besten mit Bankdirektoren reden: Wenn sie schlägt, fühlt man keinen Schmerz.", source: "Jean Marley" },
+            { text: "Über Musik kann man am besten mit Bankdirektoren reden: Sie verrät nie ihr letztes Geheimnis.", source: "Jean Wilde" },
+            { text: "Über Musik kann man am besten mit Bankdirektoren reden: Nur die Plattenfirmen denken, dass man sie besitzen kann.", source: "Jean Lennon" },
+            { text: "Über Musik kann man am besten mit Bankdirektoren reden: Sobald man aufhört treibt man zurück.", source: "Jean Britten" },
+            { text: "Über Musik kann man am besten mit Bankdirektoren reden: Man kann darüber nicht sprechen, man muss es erleben.", source: "Jean Springsteen" },
+            { text: "Über Musik kann man am besten mit Bankdirektoren reden: Doch ewig braucht sie nicht zu währen.", source: "Jean Busch" },
+            { text: "Über Musik kann man am besten mit Bankdirektoren reden: Erst, wenn du ein Stück ganz fertig hast, probiere es am Instrumente!", source: "Jean Schumann" },
+            { text: "Über Musik kann man am besten mit Bankdirektoren reden. In meinem Fach ist das nicht nötig.", source: "Jean Presley" },
+            { text: "Über Musik kann man am besten mit Bankdirektoren reden. Sie bekommen sie umsonst.", source: "Jean Cole" },
+            { text: "Über Musik kann man am besten mit Bankdirektoren reden. Du machst ihnen Mut.", source: "Jean Strawinsky" },
+            { text: "Über Musik kann man am besten mit Bankdirektoren reden. Rapper machen das.", source: "Jean Gallagher" },
+            { text: "Über Musik kann man am besten mit Bankdirektoren reden. Mick und ich hatten niemals Sex miteinander!", source: "Jean Richards" },
+            { text: "Die Musik ist der vollkommenste Typus der Kunst: Ungeübte Ohren halten schon das Stimmen der Instrumente für Musik.", source: "Oscar Fanfani" },
+            { text: "Die Musik ist der vollkommenste Typus der Kunst: Wenn sie schlägt, fühlt man keinen Schmerz.", source: "Oscar Marley" },
+            { text: "Die Musik ist der vollkommenste Typus der Kunst: Künstler reden ja nur übers Geld.", source: "Oscar Sibelius" },
+            { text: "Die Musik ist der vollkommenste Typus der Kunst: Nur die Plattenfirmen denken, dass man sie besitzen kann.", source: "Oscar Lennon" },
+            { text: "Die Musik ist der vollkommenste Typus der Kunst: Sobald man aufhört treibt man zurück.", source: "Oscar Britten" },
+            { text: "Die Musik ist der vollkommenste Typus der Kunst: Man kann darüber nicht sprechen, man muss es erleben.", source: "Oscar Springsteen" },
+            { text: "Die Musik ist der vollkommenste Typus der Kunst. Doch ewig braucht sie nicht zu währen.", source: "Oscar Busch" },
+            { text: "Die Musik ist der vollkommenste Typus der Kunst. Erst, wenn du ein Stück ganz fertig hast, probiere es am Instrumente!", source: "Oscar Schumann" },
+            { text: "Die Musik ist der vollkommenste Typus der Kunst: In meinem Fach ist das nicht nötig.", source: "Oscar Presley" },
+            { text: "Die Musik ist der vollkommenste Typus der Kunst. Sie bekommen sie umsonst.", source: "Oscar Cole" },
+            { text: "Die Musik ist der vollkommenste Typus der Kunst. Du machst ihnen Mut.", source: "Oscar Strawinsky" },
+            { text: "Die Musik ist der vollkommenste Typus der Kunst. Rapper machen das.", source: "Oscar Gallagher" },
+            { text: "Die Musik ist der vollkommenste Typus der Kunst. Mick und ich hatten niemals Sex miteinander!", source: "Oscar Richards" },
+            { text: "Musik gehört allen. Wenn sie schlägt, fühlt man keinen Schmerz.", source: "John Marley" }
         ];
 
         document.getElementById('generate').addEventListener('click', () => {
             const randomIndex = Math.floor(Math.random() * aphorismen.length);
             const aphorismus = aphorismen[randomIndex];
-            document.getElementById('aphorismus').innerHTML = `<span class="aphorismus">${aphorismus.text}</span>`;
-            document.getElementById('quelle').innerHTML = `<span class="quelle">(${aphorismus.source})</span>`;
+            document.getElementById('aphorismus').textContent = aphorismus.text;
+            document.getElementById('quelle').textContent = `(${aphorismus.source})`;
         });
     </script>
 </body>
