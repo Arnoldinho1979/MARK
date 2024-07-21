@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Der Musik-Aphorismus-Rekreator (MARK)</title>
+    <title>Der VAN-Musik-Aphorismus-Rekreation (MARK)</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center; /* Zentriert den gesamten Text auf der Seite */
         }
         h1 {
-            text-align: center;
+            color: #333;
         }
         .aphorismus {
             font-style: italic;
-            margin: 20px 0;
+            font-weight: bold;
+            display: block;
+            margin: 20px 0; /* Abstand oben und unten */
         }
         .quelle {
             font-style: normal;
-            font-weight: normal;
+            color: #555;
+            display: block;
+            margin-bottom: 40px; /* Abstand unten */
         }
         button {
-            display: block;
-            margin: 20px auto;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
@@ -34,49 +35,20 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Der VAN-Musik-Aphorismus-Rekreator (MARK)</h1>
-        <button onclick="generateAphorismus()">Neuen Musik-Aphorismus generieren</button>
-        <div id="aphorismus" class="aphorismus"></div>
-        <div id="quelle" class="quelle"></div>
-    </div>
+    <h1>Der VAN-Musik-Aphorismus-Rekreation (MARK)</h1>
+    <button id="generate">Neuen Musik-Aphorismus generieren</button>
+    <div id="aphorismus" class="aphorismus"></div>
+    <div id="quelle" class="quelle"></div>
 
     <script>
         const aphorismen = [
-            { text: "In der Politik ist es wie in einem Konzert: Wenn sie schlägt, fühlt man keinen Schmerz.", quelle: "Amintore Marley" },
-            { text: "In der Politik ist es wie in einem Konzert: Künstler reden ja nur übers Geld.", quelle: "Amintore Sibelius" },
-            { text: "In der Politik ist es wie in einem Konzert: Sie verrät nie ihr letztes Geheimnis.", quelle: "Amintore Wilde" },
-            { text: "In der Politik ist es wie in einem Konzert: Nur die Plattenfirmen denken, dass man sie besitzen kann.", quelle: "Amintore Lennon" },
-            { text: "In der Politik ist es wie in einem Konzert: Sobald man aufhört treibt man zurück.", quelle: "Amintore Britten" },
-            { text: "In der Politik ist es wie in einem Konzert: Man kann darüber nicht sprechen, man muss es erleben.", quelle: "Amintore Springsteen" },
-            { text: "In der Politik ist es wie in einem Konzert. Doch ewig braucht sie nicht zu währen.", quelle: "Amintore Busch" },
-            { text: "In der Politik ist es wie in einem Konzert. Erst, wenn du ein Stück ganz fertig hast, probiere es am Instrumente!", quelle: "Amintore Schumann" },
-            { text: "In der Politik ist es wie in einem Konzert: In meinem Fach ist das nicht nötig.", quelle: "Amintore Presley" },
-            { text: "In der Politik ist es wie in einem Konzert: Sie bekommen sie umsonst.", quelle: "Amintore Cole" },
-            { text: "In der Politik ist es wie in einem Konzert: Du machst ihnen Mut.", quelle: "Amintore Strawinsky" },
-            { text: "In der Politik ist es wie in einem Konzert: Mick und ich hatten niemals Sex miteinander!", quelle: "Amintore Richards" },
-            { text: "Eine gute Sache über die Musik: Ungeübte Ohren halten schon das Stimmen der Instrumente für Musik.", quelle: "Bob Fanfani" },
-            { text: "Eine gute Sache über die Musik: Künstler reden ja nur übers Geld.", quelle: "Bob Sibelius" },
-            { text: "Eine gute Sache über die Musik: Sie verrät nie ihr letztes Geheimnis.", quelle: "Bob Wilde" },
-            { text: "Eine gute Sache über die Musik: Nur die Plattenfirmen denken, dass man sie besitzen kann.", quelle: "Bob Lennon" },
-            { text: "Eine gute Sache über die Musik: Sobald man aufhört treibt man zurück.", quelle: "Bob Britten" },
-            { text: "Eine gute Sache über die Musik: Man kann darüber nicht sprechen, man muss es erleben.", quelle: "Bob Springsteen" },
-            { text: "Eine gute Sache über die Musik: Doch ewig braucht sie nicht zu währen.", quelle: "Bob Busch" },
-            { text: "Eine gute Sache über die Musik: Erst, wenn du ein Stück ganz fertig hast, probiere es am Instrumente!", quelle: "Bob Schumann" },
-            { text: "Eine gute Sache über die Musik: In meinem Fach ist das nicht nötig.", quelle: "Bob Presley" },
-            { text: "Eine gute Sache über die Musik: Sie bekommen sie umsonst.", quelle: "Bob Cole" },
-            { text: "Eine gute Sache über die Musik: Du machst ihnen Mut.", quelle: "Bob Strawinsky" },
-            { text: "Eine gute Sache über die Musik: Rapper machen das.", quelle: "Bob Gallagher" },
-            { text: "Eine gute Sache über die Musik: Mick und ich hatten niemals Sex miteinander!", quelle: "Bob Richards" },
-            { text: "Über Musik kann man am besten mit Bankdirektoren reden: Ungeübte Ohren halten schon das Stimmen der Instrumente für Musik.", quelle: "Jean Fanfani" }
-        ];
-
-        function generateAphorismus() {
-            const randomIndex = Math.floor(Math.random() * aphorismen.length);
-            const selectedAphorismus = aphorismen[randomIndex];
-            document.getElementById('aphorismus').textContent = selectedAphorismus.text;
-            document.getElementById('quelle').textContent = `(${selectedAphorismus.quelle})`;
-        }
-    </script>
-</body>
-</html>
+            { text: "In der Politik ist es wie in einem Konzert: Wenn sie schlägt, fühlt man keinen Schmerz.", source: "Amintore Marley" },
+            { text: "In der Politik ist es wie in einem Konzert: Künstler reden ja nur übers Geld.", source: "Amintore Sibelius" },
+            { text: "In der Politik ist es wie in einem Konzert: Sie verrät nie ihr letztes Geheimnis.", source: "Amintore Wilde" },
+            { text: "In der Politik ist es wie in einem Konzert: Nur die Plattenfirmen denken, dass man sie besitzen kann.", source: "Amintore Lennon" },
+            { text: "In der Politik ist es wie in einem Konzert: Sobald man aufhört treibt man zurück.", source: "Amintore Britten" },
+            { text: "In der Politik ist es wie in einem Konzert: Man kann darüber nicht sprechen, man muss es erleben.", source: "Amintore Springsteen" },
+            { text: "In der Politik ist es wie in einem Konzert. Doch ewig braucht sie nicht zu währen.", source: "Amintore Busch" },
+            { text: "In der Politik ist es wie in einem Konzert. Erst, wenn du ein Stück ganz fertig hast, probiere es am Instrumente!", source: "Amintore Schumann" },
+            { text: "In der Politik ist es wie in einem Konzert: In meinem Fach ist das nicht nötig.", source: "Amintore Presley" },
+            { text: "In der Politik ist es wie
