@@ -2823,36 +2823,37 @@
         <button onclick="shareOnX()">Auf X teilen</button>
     </div>
 
-    <script>
-        function getShareText() {
-            const aphorismusText = document.getElementById('aphorismus').innerText;
-            return `»${aphorismusText}« M.A.R.K. - Musik-Aphorismus-Rekombinator https://arnoldinho1979.github.io/MARK/`;
-        }
+   <script>
+    function getShareText() {
+        const aphorismusText = document.getElementById('aphorismus').innerText;
+        return `»${aphorismusText}« M.A.R.K. - Musik-Aphorismus-Rekombinator`;
+    }
 
-        function shareOnFacebook() {
-            const text = getShareText();
-            const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(text)}`;
-            window.open(facebookUrl, '_blank');
-        }
+    function shareOnFacebook() {
+        const text = getShareText();
+        const url = "https://arnoldinho1979.github.io/MARK/";
+        const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
+        window.open(facebookUrl, '_blank');
+    }
 
-        function shareOnThreads() {
-            const text = getShareText();
-            const threadsUrl = `https://www.threads.net/share?text=${encodeURIComponent(text)}`;
-            window.open(threadsUrl, '_blank');
-        }
+    function shareOnThreads() {
+        const text = getShareText();
+        const threadsUrl = `https://www.threads.net/share?text=${encodeURIComponent(text)}&url=https://arnoldinho1979.github.io/MARK/`;
+        window.open(threadsUrl, '_blank');
+    }
 
-        function shareOnBluesky() {
-            const text = getShareText();
-            const blueskyUrl = `https://bsky.app/compose?text=${encodeURIComponent(text)}`;
-            window.open(blueskyUrl, '_blank');
-        }
+    function shareOnBluesky() {
+        const text = getShareText();
+        const blueskyUrl = `https://bsky.app/compose?text=${encodeURIComponent(text)}%20https://arnoldinho1979.github.io/MARK/`;
+        window.open(blueskyUrl, '_blank');
+    }
 
-        function shareOnX() {
-            const text = getShareText();
-            const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
-            window.open(xUrl, '_blank');
-        }
-    </script>
+    function shareOnX() {
+        const text = getShareText();
+        const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}%20https://arnoldinho1979.github.io/MARK/`;
+        window.open(xUrl, '_blank');
+    }
+</script>
 
     <br>
     <br>
