@@ -2811,6 +2811,47 @@
             document.getElementById('quelle').innerHTML = `<span class="quelle">(${aphorismus.source})</span>`;
         });
       </script>
+        </script>
+
+    <!-- Social Media Share Buttons -->
+    <div style="margin-top: 20px;">
+        <button onclick="shareOnFacebook()">Auf Facebook teilen</button>
+        <button onclick="shareOnThreads()">Auf Threads teilen</button>
+        <button onclick="shareOnBluesky()">Auf Bluesky teilen</button>
+        <button onclick="shareOnX()">Auf X teilen</button>
+    </div>
+
+    <script>
+        function getShareText() {
+            const aphorismusText = document.getElementById('aphorismus').innerText;
+            return `»${aphorismusText}« M.A.R.K. - Musik-Aphorismus-Rekombinator https://arnoldinho1979.github.io/MARK/`;
+        }
+
+        function shareOnFacebook() {
+            const text = getShareText();
+            const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(text)}`;
+            window.open(facebookUrl, '_blank');
+        }
+
+        function shareOnThreads() {
+            const text = getShareText();
+            const threadsUrl = `https://www.threads.net/share?text=${encodeURIComponent(text)}`;
+            window.open(threadsUrl, '_blank');
+        }
+
+        function shareOnBluesky() {
+            const text = getShareText();
+            const blueskyUrl = `https://bsky.app/compose?text=${encodeURIComponent(text)}`;
+            window.open(blueskyUrl, '_blank');
+        }
+
+        function shareOnX() {
+            const text = getShareText();
+            const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+            window.open(xUrl, '_blank');
+        }
+    </script>
+
     <br>
     <br>
     <br>
