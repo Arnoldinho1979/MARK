@@ -2834,12 +2834,12 @@
 }
 
 
-    function shareOnFacebook() {
-        const text = getShareText();
-        const url = "https://arnoldinho1979.github.io/MARK/";
-        const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
-        window.open(facebookUrl, '_blank');
-    }
+   function shareOnFacebook() {
+    const text = getShareText(); // Den aktuellen Text abrufen
+    const url = "https://arnoldinho1979.github.io/MARK/";
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
+    window.open(facebookUrl, '_blank');
+}
 
     function shareOnThreads() {
         const text = getShareText();
