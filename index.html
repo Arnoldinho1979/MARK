@@ -2828,10 +2828,11 @@
     </div>
 
    <script>
-    function getShareText() {
-        const aphorismusText = document.getElementById('aphorismus').innerText;
-        return `»${aphorismusText}« M.A.R.K. - Musik-Aphorismus-Rekombinator`;
-    }
+   function getShareText() {
+    const aphorismusText = document.getElementById('aphorismus').innerText; // Stellt sicher, dass der Text abgerufen wird
+    return `»${aphorismusText}« M.A.R.K. - Musik-Aphorismus-Rekombinator`;
+}
+
 
     function shareOnFacebook() {
         const text = getShareText();
