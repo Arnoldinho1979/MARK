@@ -31,11 +31,11 @@
         padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
-        background-color: gray; /* Alle Buttons (Social Media) bleiben grau */
+        background-color: gray;
         color: white;
     }
     #generate {
-        background-color: red; /* Der "Neuen Aphorismus rekombinieren"-Button wird rot */
+        background-color: red;
     }
 </style>
 
@@ -2809,48 +2809,13 @@
 
         ];
 
-
         document.getElementById('generate').addEventListener('click', () => {
             const randomIndex = Math.floor(Math.random() * aphorismen.length);
             const aphorismus = aphorismen[randomIndex];
             document.getElementById('aphorismus').innerHTML = `<span class="aphorismus">${aphorismus.text}</span>`;
             document.getElementById('quelle').innerHTML = `<span class="quelle">(${aphorismus.source})</span>`;
         });
-      </script>
-        </script>
-
-    <!-- Social Media Share Buttons -->
-    <div style="margin-top: 20px;">
-        <button onclick="shareOnThreads()">Auf Threads teilen</button>
-        <button onclick="shareOnBluesky()">Auf Bluesky teilen</button>
-        <button onclick="shareOnX()">Auf X teilen</button>
-    </div>
-
-   <script>
-   function getShareText() {
-    const aphorismusText = document.getElementById('aphorismus').innerText; // Stellt sicher, dass der Text abgerufen wird
-    return `»${aphorismusText}« M.A.R.K. - Musik-Aphorismus-Rekombinator`;
-
-}
-
-    function shareOnThreads() {
-        const text = getShareText();
-        const threadsUrl = `https://www.threads.net/share?text=${encodeURIComponent(text)}&url=https://arnoldinho1979.github.io/MARK/`;
-        window.open(threadsUrl, '_blank');
-    }
-
-    function shareOnBluesky() {
-        const text = getShareText();
-        const blueskyUrl = `https://bsky.app/compose?text=${encodeURIComponent(text)}%20https://arnoldinho1979.github.io/MARK/`;
-        window.open(blueskyUrl, '_blank');
-    }
-
-    function shareOnX() {
-        const text = getShareText();
-        const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}%20https://arnoldinho1979.github.io/MARK/`;
-        window.open(xUrl, '_blank');
-    }
-</script>
+    </script>
 
     <br>
     <br>
