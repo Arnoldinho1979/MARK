@@ -2831,14 +2831,7 @@
    function getShareText() {
     const aphorismusText = document.getElementById('aphorismus').innerText; // Stellt sicher, dass der Text abgerufen wird
     return `»${aphorismusText}« M.A.R.K. - Musik-Aphorismus-Rekombinator`;
-}
 
-
-   function shareOnFacebook() {
-    const text = getShareText(); // Den aktuellen Text abrufen
-    const url = "https://arnoldinho1979.github.io/MARK/";
-    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
-    window.open(facebookUrl, '_blank');
 }
 
     function shareOnThreads() {
