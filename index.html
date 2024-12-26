@@ -4,43 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M.A.R.K. – Musik-Aphorismus-Rekombinator</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        padding: 20px;
-        background-color: #f4f4f4;
-        text-align: center;
-    }
-    h1 {
-        color: #333;
-    }
-    .aphorismus {
-        font-style: italic;
-        font-weight: bold;
-        display: block;
-        margin-top: 20px;
-        opacity: 0;
-        transition: opacity 2s ease-in-out;
-    }
-    .quelle {
-        font-style: normal;
-        color: #555;
-        display: block;
-        margin: 0;
-    }
-    button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        background-color: gray;
-        color: white;
-    }
-    #generate {
-        background-color: red;
-    }
-</style>
-
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .aphorismus {
+            font-style: italic;
+            font-weight: bold;
+            display: block;
+            margin-top: 20px;
+            opacity: 0; /* Startet ausgeblendet */
+            transition: opacity 1s ease-in-out; /* Langsame Einblendung */
+        }
+        .quelle {
+            font-style: normal;
+            color: #555;
+            display: block;
+            margin: 0;
+            opacity: 0; /* Startet ausgeblendet */
+            transition: opacity 1s ease-in-out; /* Langsame Einblendung */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: gray;
+            color: white;
+        }
+        #generate {
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
     <h1>M.A.R.K.</h1>
