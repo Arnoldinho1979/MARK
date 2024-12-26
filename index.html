@@ -52,10 +52,8 @@
 
     <script>
         const aphorismen = [
+            { text: "Die Orgel ist doch in meinen Augen und Ohren NN", source: "Wolfgang Amadeus NN" },
 
-
-
-            
 { text: "Die Orgel ist doch in meinen Augen und Ohren NN", source: "Wolfgang Amadeus NN" },
 
 { text: "NN der König aller Instrumente.", source: "NN Mozart" },
@@ -3197,21 +3195,42 @@
 
         ];
 
-        document.getElementById('generate').addEventListener('click', () => {
-            const randomIndex = Math.floor(Math.random() * aphorismen.length);
-            const aphorismus = aphorismen[randomIndex];
-            document.getElementById('aphorismus').innerHTML = `<span class="aphorismus">${aphorismus.text}</span>`;
-            document.getElementById('quelle').innerHTML = `<span class="quelle">(${aphorismus.source})</span>`;
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        const aphorismusDiv = document.getElementById("aphorismus");
+        const quelleDiv = document.getElementById("quelle");
+        const generateButton = document.getElementById("generate");
+
+        generateButton.addEventListener('click', () => {
+            const randomAphorismus = aphorismen[Math.floor(Math.random() * aphorismen.length)];
+            aphorismusDiv.textContent = randomAphorismus.text;
+            quelleDiv.textContent = `– ${randomAphorismus.source}`;
+
+            // Sofortige Anzeige ohne Animation für erneute Klicks verhindern
+            aphorismusDiv.style.transition = "none";
+            quelleDiv.style.transition = "none";
+            aphorismusDiv.style.opacity = 0;
+            quelleDiv.style.opacity = 0;
+
+            // Nach kurzer Verzögerung Animation aktivieren
+            setTimeout(() => {
+                aphorismusDiv.style.transition = "opacity 1s ease-in-out";
+                quelleDiv.style.transition = "opacity 1s ease-in-out";
+                aphorismusDiv.style.opacity = 1; // Nach 1 Sekunde einblenden
+                quelleDiv.style.opacity = 1; // Nach 1 Sekunde einblenden
+            }, 10); // Kleiner Timer, um die Transition anzustoßen
         });
     </script>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <footer>
-        <p>&copy; Made by Arno Lücker 2024 for <a href="https://van-magazin.de" target="_blank">VAN Magazin</a></p>
-    </footer>
 </body>
 </html>
