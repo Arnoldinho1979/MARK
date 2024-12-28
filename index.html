@@ -215,19 +215,19 @@
             aphorismusDiv.textContent = randomAphorismus.text;
             quelleDiv.textContent = `– ${randomAphorismus.source}`;
 
-            // Sofortige Anzeige ohne Animation für erneute Klicks verhindern
+        
             aphorismusDiv.style.transition = "none";
             quelleDiv.style.transition = "none";
             aphorismusDiv.style.opacity = 0;
             quelleDiv.style.opacity = 0;
 
-            // Nach kurzer Verzögerung Animation aktivieren
+            
             setTimeout(() => {
                 aphorismusDiv.style.transition = "opacity 1s ease-in-out";
                 quelleDiv.style.transition = "opacity 1s ease-in-out";
-                aphorismusDiv.style.opacity = 1; // Nach 1 Sekunde einblenden
-                quelleDiv.style.opacity = 1; // Nach 1 Sekunde einblenden
-            }, 10); // Kleiner Timer, um die Transition anzustoßen
+                aphorismusDiv.style.opacity = 1;
+                quelleDiv.style.opacity = 1;
+            }, 10);
         });
     </script>
     <footer>
